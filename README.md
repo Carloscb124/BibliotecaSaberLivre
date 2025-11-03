@@ -48,7 +48,9 @@ Banco de dados Access local, fácil de transportar e fazer backup
 
 ## Demonstração
 
-Insira um gif ou um link de alguma demonstração
+<p align="center">
+  <img src="image.png" alt="Dashboard">
+</p>
 
 
 ## Aprendizados
