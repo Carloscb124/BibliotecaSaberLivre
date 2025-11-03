@@ -49,7 +49,7 @@ Banco de dados Access local, fácil de transportar e fazer backup
 ## Demonstração
 
 <p align="center">
-  <img src= Biblioteca/assets/="image.png" alt="Dashboard">
+  <img src="image.png" alt="Dashboard">
 </p>
 
 
