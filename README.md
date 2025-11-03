@@ -10,6 +10,9 @@ Ele oferece uma interface moderna, intuitiva e colorida, permitindo que o usuár
 O sistema adota um tema escuro com tons vibrantes, proporcionando conforto visual e uma experiência moderna.
 Cada módulo possui uma cor própria para facilitar a identificação rápida das seções:
 
+## Demonstração
+
+![Imagem Do sistema da biblioteca](Biblioteca/assets/image.png)
 
 
 ## ⚙️ Funcionalidades Principais
@@ -45,11 +48,6 @@ Banco de dados Access local, fácil de transportar e fazer backup
  ┃ ┗ dbBibliotecaAtual1.accdb
  ┗ 📜 README.md
  ```
-
-## Demonstração
-
-![Imagem Do sistema da biblioteca](Biblioteca/assets/image.png)
-
 
 ## Aprendizados
 
