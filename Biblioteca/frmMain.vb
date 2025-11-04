@@ -1,4 +1,4 @@
-﻿
+﻿Imports System.Runtime.InteropServices
 Public Class frmMain
 
     Private Sub btnMenu_Click_1(sender As Object, e As EventArgs) Handles btnMenu.Click
@@ -102,8 +102,96 @@ Public Class frmMain
         End
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
 
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
+    End Sub
+
+    Private Sub frmMain_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    ' Flag para controlar o "maximizado custom"
+    Private isCustomMaximized As Boolean = False
+    Private prevBounds As Rectangle
+    Private prevWindowState As FormWindowState
+
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        ' Fade rápido
+        FadeTransition(0.0, 0.08) ' fade out curto
+
+        If Not isCustomMaximized Then
+            ' salva estado atual para restaurar depois
+            prevBounds = Me.Bounds
+            prevWindowState = Me.WindowState
+
+            ' maximiza respeitando a taskbar (sem usar WindowState = Maximized)
+            MaximizarFormulario()
+            isCustomMaximized = True
+            btnMaximize.Image = My.Resources.restore
+        Else
+            ' restaura estado salvo
+            RestaurarFormulario()
+            isCustomMaximized = False
+            btnMaximize.Image = My.Resources.maximize
+        End If
+
+        Application.DoEvents()
+
+        ' Fade in rápido
+        FadeTransition(1.0, 0.08)
+
+        ' Mantém os botões sempre visíveis
+        btnMaximize.BringToFront()
+        btnMinimize.BringToFront()
+    End Sub
+
+    Private Sub MaximizarFormulario()
+        Dim screen As Screen = Screen.FromControl(Me)
+        Dim areaTrabalho As Rectangle = screen.WorkingArea
+        Dim telaCompleta As Rectangle = screen.Bounds
+
+        ' Detecta se a taskbar está oculta automaticamente (quando área útil = total)
+        Dim taskbarOculta As Boolean = (areaTrabalho.Height = telaCompleta.Height AndAlso areaTrabalho.Width = telaCompleta.Width)
+
+        ' Se estiver oculta, ocupa a tela inteira
+        If taskbarOculta Then
+            Me.Bounds = telaCompleta
+        Else
+            Me.Bounds = areaTrabalho
+        End If
+    End Sub
+
+    Private Sub RestaurarFormulario()
+        ' Restaura para o estado e tamanho anterior
+        Me.FormBorderStyle = FormBorderStyle.None ' ou o que você usava antes
+        Me.Bounds = prevBounds
+        Me.WindowState = prevWindowState
+        Me.Refresh()
+    End Sub
+
+    Private Sub FadeTransition(targetOpacity As Double, duration As Double)
+        Dim steps As Integer = 12 ' menos steps = transição mais rápida
+        Dim stepTime As Integer = CInt(duration * 1000 / steps)
+        Dim delta As Double = (targetOpacity - Me.Opacity) / steps
+
+        For i As Integer = 1 To steps
+            Me.Opacity += delta
+            Application.DoEvents()
+            Threading.Thread.Sleep(stepTime)
+        Next
+    End Sub
+
+    Private Sub btnMinimize_Click(sender As Object, e As EventArgs) Handles btnMinimize.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        btnMaximize.Image = My.Resources.maximize
     End Sub
 
 End Class

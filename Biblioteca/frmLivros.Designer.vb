@@ -36,6 +36,8 @@ Partial Class frmLivros
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(26, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.Guna2Panel1.BorderRadius = 20
         Me.Guna2Panel1.Controls.Add(Me.Guna2GradientButton1)
@@ -77,6 +79,7 @@ Partial Class frmLivros
         '
         'btnLast
         '
+        Me.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnLast.BackColor = System.Drawing.Color.Transparent
         Me.btnLast.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLast.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -92,13 +95,14 @@ Partial Class frmLivros
         Me.btnLast.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnLast.Image = Global.Biblioteca.My.Resources.Resources.keyboard_double_arrow_right_29dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
         Me.btnLast.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnLast.Location = New System.Drawing.Point(525, 5)
+        Me.btnLast.Location = New System.Drawing.Point(577, 5)
         Me.btnLast.Name = "btnLast"
         Me.btnLast.Size = New System.Drawing.Size(40, 40)
         Me.btnLast.TabIndex = 6
         '
         'btnClose
         '
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnClose.BackColor = System.Drawing.Color.Transparent
         Me.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -121,6 +125,7 @@ Partial Class frmLivros
         '
         'btnNext
         '
+        Me.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnNext.BackColor = System.Drawing.Color.Transparent
         Me.btnNext.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnNext.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -136,13 +141,14 @@ Partial Class frmLivros
         Me.btnNext.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnNext.Image = Global.Biblioteca.My.Resources.Resources.keyboard_arrow_right_29dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
         Me.btnNext.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnNext.Location = New System.Drawing.Point(479, 5)
+        Me.btnNext.Location = New System.Drawing.Point(531, 5)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(40, 40)
         Me.btnNext.TabIndex = 3
         '
         'btnBack
         '
+        Me.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnBack.BackColor = System.Drawing.Color.Transparent
         Me.btnBack.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnBack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -158,13 +164,14 @@ Partial Class frmLivros
         Me.btnBack.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnBack.Image = Global.Biblioteca.My.Resources.Resources.keyboard_arrow_left_29dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
         Me.btnBack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnBack.Location = New System.Drawing.Point(443, 5)
+        Me.btnBack.Location = New System.Drawing.Point(495, 5)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(40, 40)
         Me.btnBack.TabIndex = 4
         '
         'btnFirst
         '
+        Me.btnFirst.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.btnFirst.BackColor = System.Drawing.Color.Transparent
         Me.btnFirst.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnFirst.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -180,7 +187,7 @@ Partial Class frmLivros
         Me.btnFirst.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnFirst.Image = Global.Biblioteca.My.Resources.Resources.keyboard_double_arrow_left_29dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
         Me.btnFirst.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnFirst.Location = New System.Drawing.Point(397, 5)
+        Me.btnFirst.Location = New System.Drawing.Point(449, 5)
         Me.btnFirst.Name = "btnFirst"
         Me.btnFirst.Size = New System.Drawing.Size(40, 40)
         Me.btnFirst.TabIndex = 2

@@ -24,18 +24,20 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnUser = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnLogOut = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnLoan = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnLeitores = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnBook = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnMenu = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnMaximize = New Guna.UI2.WinForms.Guna2Button()
         Me.btnEnd = New Guna.UI2.WinForms.Guna2Button()
         Me.titleLabel = New System.Windows.Forms.Label()
         Me.PanelContainer = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnUser = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnMenu = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel2.SuspendLayout()
@@ -43,6 +45,8 @@ Partial Class frmMain
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Guna2Panel1.BorderRadius = 20
         Me.Guna2Panel1.Controls.Add(Me.btnUser)
         Me.Guna2Panel1.Controls.Add(Me.btnLogOut)
@@ -58,8 +62,31 @@ Partial Class frmMain
         Me.Guna2Panel1.Size = New System.Drawing.Size(207, 714)
         Me.Guna2Panel1.TabIndex = 0
         '
+        'btnUser
+        '
+        Me.btnUser.BackColor = System.Drawing.Color.Transparent
+        Me.btnUser.BorderRadius = 10
+        Me.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnUser.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnUser.FillColor = System.Drawing.Color.Transparent
+        Me.btnUser.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnUser.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUser.ForeColor = System.Drawing.Color.White
+        Me.btnUser.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
+        Me.btnUser.Image = Global.Biblioteca.My.Resources.Resources.account_box_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
+        Me.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnUser.Location = New System.Drawing.Point(17, 152)
+        Me.btnUser.Name = "btnUser"
+        Me.btnUser.Size = New System.Drawing.Size(180, 36)
+        Me.btnUser.TabIndex = 9
+        Me.btnUser.Text = "Usuários"
+        '
         'btnLogOut
         '
+        Me.btnLogOut.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnLogOut.BackColor = System.Drawing.Color.Transparent
         Me.btnLogOut.BorderRadius = 10
         Me.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -169,14 +196,70 @@ Partial Class frmMain
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Saber Livre"
         '
+        'btnMenu
+        '
+        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
+        Me.btnMenu.BorderRadius = 10
+        Me.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnMenu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnMenu.FillColor = System.Drawing.Color.Transparent
+        Me.btnMenu.FillColor2 = System.Drawing.Color.Transparent
+        Me.btnMenu.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMenu.ForeColor = System.Drawing.Color.White
+        Me.btnMenu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
+        Me.btnMenu.Image = Global.Biblioteca.My.Resources.Resources.menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
+        Me.btnMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.btnMenu.Location = New System.Drawing.Point(20, 88)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(180, 36)
+        Me.btnMenu.TabIndex = 10
+        Me.btnMenu.Text = "Menu"
+        '
         'Guna2Panel2
         '
+        Me.Guna2Panel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2Panel2.Controls.Add(Me.btnMinimize)
+        Me.Guna2Panel2.Controls.Add(Me.btnMaximize)
         Me.Guna2Panel2.Controls.Add(Me.btnEnd)
-        Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(1107, 35)
         Me.Guna2Panel2.TabIndex = 2
+        '
+        'btnMinimize
+        '
+        Me.btnMinimize.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnMinimize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnMinimize.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnMinimize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnMinimize.FillColor = System.Drawing.Color.Transparent
+        Me.btnMinimize.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnMinimize.ForeColor = System.Drawing.Color.White
+        Me.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.btnMinimize.Image = Global.Biblioteca.My.Resources.Resources.remove_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
+        Me.btnMinimize.Location = New System.Drawing.Point(982, 3)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(37, 29)
+        Me.btnMinimize.TabIndex = 3
+        '
+        'btnMaximize
+        '
+        Me.btnMaximize.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnMaximize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnMaximize.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnMaximize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnMaximize.FillColor = System.Drawing.Color.Transparent
+        Me.btnMaximize.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnMaximize.ForeColor = System.Drawing.Color.White
+        Me.btnMaximize.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
+        Me.btnMaximize.Image = Global.Biblioteca.My.Resources.Resources.maximize
+        Me.btnMaximize.Location = New System.Drawing.Point(1025, 3)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.Size = New System.Drawing.Size(37, 29)
+        Me.btnMaximize.TabIndex = 2
         '
         'btnEnd
         '
@@ -206,56 +289,15 @@ Partial Class frmMain
         '
         'PanelContainer
         '
+        Me.PanelContainer.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PanelContainer.BackColor = System.Drawing.Color.Transparent
         Me.PanelContainer.BorderRadius = 10
         Me.PanelContainer.Location = New System.Drawing.Point(250, 73)
         Me.PanelContainer.Name = "PanelContainer"
         Me.PanelContainer.Size = New System.Drawing.Size(812, 638)
         Me.PanelContainer.TabIndex = 4
-        '
-        'btnUser
-        '
-        Me.btnUser.BackColor = System.Drawing.Color.Transparent
-        Me.btnUser.BorderRadius = 10
-        Me.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnUser.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnUser.FillColor = System.Drawing.Color.Transparent
-        Me.btnUser.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnUser.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUser.ForeColor = System.Drawing.Color.White
-        Me.btnUser.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
-        Me.btnUser.Image = Global.Biblioteca.My.Resources.Resources.account_box_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
-        Me.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnUser.Location = New System.Drawing.Point(17, 152)
-        Me.btnUser.Name = "btnUser"
-        Me.btnUser.Size = New System.Drawing.Size(180, 36)
-        Me.btnUser.TabIndex = 9
-        Me.btnUser.Text = "Usuários"
-        '
-        'btnMenu
-        '
-        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnMenu.BorderRadius = 10
-        Me.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnMenu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnMenu.FillColor = System.Drawing.Color.Transparent
-        Me.btnMenu.FillColor2 = System.Drawing.Color.Transparent
-        Me.btnMenu.Font = New System.Drawing.Font("Century Gothic", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMenu.ForeColor = System.Drawing.Color.White
-        Me.btnMenu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
-        Me.btnMenu.Image = Global.Biblioteca.My.Resources.Resources.menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
-        Me.btnMenu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.btnMenu.Location = New System.Drawing.Point(20, 88)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(180, 36)
-        Me.btnMenu.TabIndex = 10
-        Me.btnMenu.Text = "Menu"
         '
         'frmMain
         '
@@ -272,8 +314,6 @@ Partial Class frmMain
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(1107, 738)
-        Me.MinimumSize = New System.Drawing.Size(1107, 738)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmMain"
@@ -299,4 +339,6 @@ Partial Class frmMain
     Friend WithEvents PanelContainer As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents btnUser As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnMenu As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents btnMinimize As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnMaximize As Guna.UI2.WinForms.Guna2Button
 End Class

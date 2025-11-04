@@ -247,5 +247,20 @@
       <Version>2.0.4.7</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_box_outline_blank_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_none_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
