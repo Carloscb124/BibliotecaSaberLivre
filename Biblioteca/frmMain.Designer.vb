@@ -238,8 +238,8 @@ Partial Class frmMain
         Me.btnMinimize.FillColor = System.Drawing.Color.Transparent
         Me.btnMinimize.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnMinimize.ForeColor = System.Drawing.Color.White
-        Me.btnMinimize.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnMinimize.Image = Global.Biblioteca.My.Resources.Resources.remove_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24
+        Me.btnMinimize.ImageSize = New System.Drawing.Size(15, 15)
         Me.btnMinimize.Location = New System.Drawing.Point(982, 3)
         Me.btnMinimize.Name = "btnMinimize"
         Me.btnMinimize.Size = New System.Drawing.Size(37, 29)
@@ -252,10 +252,10 @@ Partial Class frmMain
         Me.btnMaximize.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnMaximize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnMaximize.FillColor = System.Drawing.Color.Transparent
-        Me.btnMaximize.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnMaximize.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnMaximize.ForeColor = System.Drawing.Color.White
-        Me.btnMaximize.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(203, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(34, Byte), Integer))
         Me.btnMaximize.Image = Global.Biblioteca.My.Resources.Resources.maximize
+        Me.btnMaximize.ImageSize = New System.Drawing.Size(15, 15)
         Me.btnMaximize.Location = New System.Drawing.Point(1025, 3)
         Me.btnMaximize.Name = "btnMaximize"
         Me.btnMaximize.Size = New System.Drawing.Size(37, 29)

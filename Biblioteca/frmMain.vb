@@ -194,4 +194,13 @@ Public Class frmMain
         btnMaximize.Image = My.Resources.maximize
     End Sub
 
+    Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
+        If keyData = Keys.Escape Then
+            ' Chama a mesma ação do botão de maximizar/restaurar
+            btnMaximize.PerformClick()
+            Return True
+        End If
+        Return MyBase.ProcessCmdKey(msg, keyData)
+    End Function
+
 End Class
