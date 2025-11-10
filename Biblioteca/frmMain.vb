@@ -1,6 +1,10 @@
 ﻿Imports System.Runtime.InteropServices
 Public Class frmMain
 
+    Public Property NomeUsuario As String
+    Public Property NivelUsuario As String
+
+
     Private Sub btnMenu_Click_1(sender As Object, e As EventArgs) Handles btnMenu.Click
         ButtonOff()
         btnMenu.FillColor = Color.FromArgb(111, 93, 235)
@@ -52,6 +56,7 @@ Public Class frmMain
         btnLogOut.FillColor = Color.FromArgb(111, 93, 235)
         btnLogOut.FillColor2 = Color.FromArgb(111, 93, 235)
         Close()
+        Form1.Show()
     End Sub
 
     Private Sub ButtonOff()
@@ -102,18 +107,6 @@ Public Class frmMain
         End
     End Sub
 
-    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
-    Private Shared Sub ReleaseCapture()
-    End Sub
-
-    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
-    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
-    End Sub
-
-    Private Sub frmMain_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
 
     ' Flag para controlar o "maximizado custom"
     Private isCustomMaximized As Boolean = False
@@ -121,6 +114,7 @@ Public Class frmMain
     Private prevWindowState As FormWindowState
 
     Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+
         ' Fade rápido
         FadeTransition(0.0, 0.08) ' fade out curto
 
@@ -192,6 +186,24 @@ Public Class frmMain
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnMaximize.Image = My.Resources.maximize
+
+
+        If Form1.Nivel_usuarioComboBox.Text = "Bibliotecario" Then
+
+            btnUser.Visible = False
+
+        End If
+
+        ' Exibe o nome do usuário no label
+        lblUser.Text = "Bem-vindo, " & NomeUsuario
+
+        ' Escolhe o ícone conforme o nível
+        If NivelUsuario.ToLower() = "administrador" Then
+            PictureBox2.Image = My.Resources.admIcon
+        Else
+            PictureBox2.Image = My.Resources.usuario
+        End If
+
     End Sub
 
     Protected Overrides Function ProcessCmdKey(ByRef msg As Message, keyData As Keys) As Boolean
@@ -202,5 +214,22 @@ Public Class frmMain
         End If
         Return MyBase.ProcessCmdKey(msg, keyData)
     End Function
+
+    Private Sub PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles PanelContainer.Paint
+
+    End Sub
+
+    <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
+    Private Shared Sub ReleaseCapture()
+    End Sub
+
+    <DllImport("user32.DLL", EntryPoint:="SendMessage")>
+    Private Shared Sub SendMessage(hWnd As IntPtr, wMsg As Integer, wParam As Integer, lParam As Integer)
+    End Sub
+
+    Private Sub frmMain_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
 
 End Class

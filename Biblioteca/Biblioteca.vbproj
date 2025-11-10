@@ -16,7 +16,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -76,6 +76,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbBibiotecaAtual1DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbBibiotecaAtual1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +116,12 @@
       <DependentUpon>frmPesquisa.vb</DependentUpon>
     </Compile>
     <Compile Include="frmPesquisa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisaEmprestimo.Designer.vb">
+      <DependentUpon>frmPesquisaEmprestimo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisaEmprestimo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUser.Designer.vb">
@@ -154,6 +165,9 @@
     <EmbeddedResource Include="frmPesquisa.resx">
       <DependentUpon>frmPesquisa.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisaEmprestimo.resx">
+      <DependentUpon>frmPesquisaEmprestimo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.vb</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +179,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dbBibiotecaAtual1DataSet.xsc">
+      <DependentUpon>dbBibiotecaAtual1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbBibiotecaAtual1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbBibiotecaAtual1DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbBibiotecaAtual1DataSet.xss">
+      <DependentUpon>dbBibiotecaAtual1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -261,6 +286,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
