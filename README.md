@@ -49,10 +49,6 @@ Banco de dados Access local, fácil de transportar e fazer backup
  ┗ 📜 README.md
  ```
 
-## Aprendizados
-
-O que você aprendeu construindo esse projeto? Quais desafios você enfrentou e como você superou-os?
-
 
 ## 💾 Requisitos
 
